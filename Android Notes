@@ -1,3 +1,12 @@
 ## Terminal commands
  - printenv (to show all enviroment variables on your system like JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home)
 
+
+
+## Useful Libs
+ - Compressor (use it to compress images before uploading it to the server)
+   https://github.com/zetbaitsu/Compressor
+
+ - Light compressor (use it to compress video before uploading it)
+   https://github.com/AbedElazizShe/LightCompressor
+   
