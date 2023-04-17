@@ -1,7 +1,11 @@
 ## Terminal commands
  - printenv (to show all enviroment variables on your system like JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home)
+ - echo $PATH (to print value of env like echo $JAVA_HOME)
+ - export var_name=value (to set enviroment variable , open .bash_profile and add new export)
 
-
+## Gradle commands
+- ./gradlew bundleRelease (to create .aab release )
+ 
 
 ## Useful Libs
  - Compressor (use it to compress images before uploading it to the server)
@@ -9,4 +13,71 @@
 
  - Light compressor (use it to compress video before uploading it)
    https://github.com/AbedElazizShe/LightCompressor
-   
+
+
+## Useful Links
+
+- CI/CD 
+https://www.kodeco.com/19407406-continuous-delivery-for-android-using-github-actions
+https://dustn.dev/post/2022-02-21-build-a-cicd-pipeline-using-github-actions/
+
+- Wajhat notes
+https://github.com/wajahatkarim3/Today-I-Learned
+
+- Modular navigation in compose
+https://medium.com/google-developer-experts/modular-navigation-with-jetpack-compose-fda9f6b2bef7
+https://funkymuse.dev/posts/compose_hilt_mm/
+
+- Photo editor 
+https://www.youtube.com/playlist?list=PLN8F_r_fgaEHy6ITcIut0TyhXR0EGoTtQ
+
+https://www.youtube.com/watch?v=hmKe5VlTJHM&ab_channel=LINEDevelopers
+
+- compose+mvi
+
+https://betterprogramming.pub/create-a-component-based-architecture-in-android-jetpack-compose-96980c191351
+
+https://www.indellient.com/blog/jetpack-compose-converting-traditional-android-views-into-reusable-composables/
+
+https://www.valueof.io/blog/compose-composable-function-generics
+
+Mvi
+https://github.com/wellingtoncabral/android-compose-mvi-navigation
+https://proandroiddev.com/mvi-architecture-with-kotlin-flows-and-channels-d36820b2028d
+https://github.com/yusufceylan/MVI-Playground
+https://dev.to/kaleidot725/implementaing-jetpack-compose-orbit-mvi-3gea
+
+- OpenGL
+
+https://www.youtube.com/@bassvasys/videos
+
+https://www.youtube.com/playlist?list=PLHCqKTNZ_dFapT6ivS0EYOMIo2W-uVsZ8
+
+https://www.youtube.com/watch?v=KTlUWPgUSNY&list=PLf93o-VpWVkbMoiyq7IYeT0T_1K--rJkX&index=1&t=9s&ab_channel=MajdAlAjlani
+https://www.myhsts.org/blog/Android_3D.html
+
+https://www.youtube.com/watch?v=C2aDeBUzwJA&list=PLBOPkQsFLCR0XuXoCf6PMhVmD2ukHXIBK&index=2&ab_channel=BeginEnd
+
+https://github.com/ouyangpeng/OpenGLESDemo
+
+https://github.com/githubhaohao/NDK_OpenGLES_3_0
+
+- TDD
+https://www.youtube.com/watch?v=1h7dIbByhcs&ab_channel=Kraftsman%3ACoding%E8%81%B7%E4%BA%BA%E5%A1%BE
+
+https://github.com/jarroyoesp/TDDWeatherApp
+
+https://github.com/jarroyoesp/TDDWeatherApp
+
+https://buffer.com/resources/exploring-test-driven-development-android-ui-tests/
+https://github.com/mobile-dev-inc/maestro
+https://github.com/ifapoleon/calculator-espresso-tests
+https://notwoods.github.io/mockk-guidebook/docs/getting-started/why-mocking/
+https://betterprogramming.pub/unit-testing-test-doubles-and-the-mocking-framework-in-kotlin-4378fbb64d6a
+https://proandroiddev.com/the-definitive-guide-to-test-doubles-on-android-part-2-practice-fc9fb51276bb
+https://blog.pragmatists.com/test-doubles-fakes-mocks-and-stubs-1a7491dfa3da
+https://blog.canopas.com/how-to-use-tdd-effectively-to-write-android-integration-tests-5efc7ee48ba8
+
+- IAP
+in-app-purchases-subscription
+https://programtown.com/how-to-make-in-app-purchase-subscription-in-android-kotlin-using-google-play-billing-library/
