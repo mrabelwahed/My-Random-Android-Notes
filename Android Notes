@@ -2,7 +2,11 @@
  - printenv (to show all enviroment variables on your system like JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home)
  - echo $PATH (to print value of env like echo $JAVA_HOME)
  - export var_name=value (to set enviroment variable , open .bash_profile and add new export)
-
+ - to delete avd files for emulator from terminal use the following two command 
+ (for example emulator name is xdevice)
+ cd ~/.android/avd 
+ rm -rf xdevice.*
+ 
 ## Gradle commands
 - ./gradlew bundleRelease (to create .aab release )
  

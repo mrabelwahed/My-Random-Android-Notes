@@ -1,0 +1,14 @@
+## Mathematical Problems
+ - to print last digit for decimal number use mod (% 10)
+ - to delete last digit for decimal number use division ( / 10)
+ - to get all divisor of a number , go through all numbers from 1  > half of the number 
+   and check if value has no reminder
+ - prime number is a natural number that is greater than 1 and is exclusively
+   divisible by itself and by 1.
+ - A prime number is a natural number that is greater than 1 and is exclusively
+  divisible by itself and by 1.
+ - a number is called a perfect number if its value is equal to the sum of its real
+   divisors (i.e., excluding itself )
+  - Armstrong numbers. These are numbers whose individual digits are first
+   exponentiated by the number of digits in the number and then added together
+   
