@@ -11,4 +11,5 @@
    divisors (i.e., excluding itself )
   - Armstrong numbers. These are numbers whose individual digits are first
    exponentiated by the number of digits in the number and then added together
-   
+  - Any natural number greater than 1 can be represented as a multiplication of
+   primes
