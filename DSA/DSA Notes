@@ -13,3 +13,15 @@
    exponentiated by the number of digits in the number and then added together
   - Any natural number greater than 1 can be represented as a multiplication of
    primes
+
+  ## string processing
+  - StringBuilder and StringBuffer are the common classes for string processing
+  - StringBuilder is not thread safe but StringBuffer is thread safe 
+  - It is fine to use String StringBuilder in one threaded problem
+  - they have delete, insert and reverse functions although they do not have toLower or toUpperCase() functions
+  - The Character class is abstract for one char and has useful functions like getNumericValue(), isDigit(), isWhiteSpace() and so one
+  - homemade conversions
+      int digitValue = digitAsChar - '0';
+      int posOfChar = currentChar - 'A';
+
+  - if you need map with order use TreeMap implementation

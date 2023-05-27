@@ -85,3 +85,19 @@ https://blog.canopas.com/how-to-use-tdd-effectively-to-write-android-integration
 - IAP
 in-app-purchases-subscription
 https://programtown.com/how-to-make-in-app-purchase-subscription-in-android-kotlin-using-google-play-billing-library/
+
+
+- Multimodule navigation
+https://medium.com/huawei-developers/navigation-component-with-feature-modules-67afc3d23f3b
+
+- Memory leaks
+https://proandroiddev.com/everything-you-need-to-know-about-memory-leaks-in-android-d7a59faaf46a
+
+- Scale Bitmap
+https://proandroiddev.com/image-decoding-bitmaps-android-c039790ee07e
+
+- image loading optimization
+https://proandroiddev.com/image-decoding-bitmaps-android-c039790ee07e
+
+- automate lokalize integration
+https://medium.com/@abughali/automate-downloading-translation-from-lokalise-using-gradle-scripts-7561ff092204
