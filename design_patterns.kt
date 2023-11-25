@@ -228,6 +228,8 @@ class ShoppingCart(val cart: MutableList<Product>) {
         //observer3.update()
 
         topic.postMessage("Hello Observers....")
+        topic.unregisterObserver(observer1)
+        topic.postMessage("Sport news....")
     }
 
     interface Subject {
@@ -296,3 +298,45 @@ class ShoppingCart(val cart: MutableList<Product>) {
     }
 
     //==============================================================================//
+    // Decorator Pattern
+    // use this pattern when scenario like having object and want to add more functionality by wrapping the default object
+    // like adding toppings to Pizza
+    fun main() {
+
+        val basicIceCream = BasicIceCream()
+        println("basic iceCream cost...${basicIceCream.cost()}")
+        val vanilaIceCream = VanilaIceCream(basicIceCream)
+        println("vanila iceCream cost...${vanilaIceCream.cost()}")
+        val chocolateIceCream = ChocolateIceCream(vanilaIceCream)
+        println("chocolate iceCream cost...${chocolateIceCream.cost()}")
+
+    }
+
+    interface IceCream {
+        fun cost(): Double
+    }
+
+    class BasicIceCream: IceCream {
+        override fun cost(): Double {
+            return 0.5;
+        }
+    }
+
+    open class IceCreamDecorator(val iceCream: IceCream): IceCream {
+
+        override fun cost(): Double {
+            return iceCream.cost();
+        }
+    }
+
+    class ChocolateIceCream (iceCream: IceCream): IceCreamDecorator(iceCream){
+        override fun cost(): Double {
+            return 1.0 + super.cost();
+        }
+    }
+
+    class VanilaIceCream (iceCream: IceCream): IceCreamDecorator(iceCream){
+        override fun cost(): Double {
+            return 1.5 + super.cost();
+        }
+    }
