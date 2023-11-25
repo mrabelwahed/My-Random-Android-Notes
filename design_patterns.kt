@@ -123,3 +123,176 @@ class FileUploaderFactory {
     }
    
 }
+// Strategy Pattern: use it when you have different implementations or logic per provider 
+// and use client class like ScoreBoard with composition (instance of interface) to assign object based on the selection of concrete objects
+fun main() {
+
+    val scoreBoard = ScoreBoard()
+    println("balloon is tapped")
+    scoreBoard.scoreBoardBase = Balloon()
+    scoreBoard.showScore(10,5)
+    println("square balloon is tapped")
+    scoreBoard.scoreBoardBase = SquareBalloon()
+    scoreBoard.showScore(10,)
+
+}
+
+class ScoreBoard {
+    var scoreBoardBase: ScoreBoardBase? = null
+    fun showScore(taps: Int, multiplier: Int) {
+        println(scoreBoardBase?.calcScore(taps,multiplier))
+    }
+}
+
+interface ScoreBoardBase {
+    fun calcScore(taps: Int, multiplier: Int): Int
+}
+
+class Balloon: ScoreBoardBase {
+    override fun calcScore(taps: Int, multiplier: Int): Int {
+        return (taps * multiplier) + 20
+    }
+}
+
+class SquareBalloon: ScoreBoardBase {
+    override fun calcScore(taps: Int, multiplier: Int): Int {
+        return (taps * multiplier) - 20
+    }
+}
+// example2: payment
+
+fun main() {
+    val product1 = Product("t-shirt", 30)
+    val product2 = Product("pantis", 10)
+    val list = mutableListOf(product1,product2)
+    val cart = ShoppingCart(list)
+    cart.pay(PayPalProvider("Mahmoud", "test@go.com"))
+    cart.pay(CreditCardProvider("Mahmoud", "4444444444444444"))
+}
+
+data class Product (val upcCode: String, val price: Int)
+
+interface Payment {
+    fun pay(amount: Int)
+}
+
+class PayPalProvider(val name: String, val email: String): Payment {
+    override fun pay(amount: Int) {
+        println("payment is done using Paypal.....$amount")
+    }
+}
+
+class CreditCardProvider(val name: String, val number: String): Payment {
+    override fun pay(amount: Int) {
+        println("payment is done using Credit.....$amount")
+    }
+}
+
+class ShoppingCart(val cart: MutableList<Product>) {
+    fun addTocart(product: Product) {
+        cart.add(product)
+    }
+
+    fun removeFromCart(product: Product) {
+        cart.remove(product)
+    }
+
+    fun pay(payment: Payment){
+        val amount = cart.sumOf{it.price}
+        payment.pay(amount)
+    }
+
+
+    //============= observer design pattern ======================
+     // use this pattern if you need to publish event/info to certain listeners
+     // like news topic, ... and so on
+
+    fun main() {
+
+        val topic = EmailTopic()
+        val observer1 = EmailTopicSubscriber("first observer")
+        val observer2 = EmailTopicSubscriber("second observer")
+        val observer3 = EmailTopicSubscriber("third observer")
+
+        topic.registerObserver(observer1)
+        topic.registerObserver(observer2)
+        topic.registerObserver(observer3)
+
+        observer1.subscribe(topic)
+        observer2.subscribe(topic)
+        observer3.subscribe(topic)
+
+
+        //observer1.update()
+        //observer2.update()
+        //observer3.update()
+
+        topic.postMessage("Hello Observers....")
+    }
+
+    interface Subject {
+        fun postMessage(msg: String)
+        fun registerObserver(observer: Observer)
+        fun unregisterObserver(observer: Observer)
+        fun notifyObservers()
+        fun getUpdate(observer: Observer): Any?
+
+    }
+
+    interface Observer {
+        fun update()
+        fun subscribe(subject: Subject)
+    }
+
+    class EmailTopic(): Subject {
+        val observers = ArrayList<Observer>()
+        var message: String? = null
+
+        override fun postMessage(msg: String){
+            message = msg
+            println("message...$msg")
+            notifyObservers()
+        }
+
+        override fun registerObserver(observer: Observer){
+            require(observer != null) {
+                println("observer should be not null ")
+            }
+
+            if(!observers.contains(observer))
+                observers.add(observer)
+        }
+
+        override fun unregisterObserver(observer: Observer){
+            observers.remove(observer)
+        }
+
+        override fun notifyObservers(){
+            observers.forEach { observer ->
+                observer.update()
+            }
+        }
+        override fun getUpdate(observer: Observer): Any?{
+            return this.message
+        }
+    }
+
+
+    class EmailTopicSubscriber(val name: String): Observer {
+
+        var subject: Subject? =  null
+
+        override fun update() {
+            val msg = subject?.getUpdate(this) as? String
+            if(msg == null)
+                println("$name no new message on this subject")
+            else
+                println("$name receiving message : $msg")
+        }
+
+        override fun subscribe(subject: Subject){
+            this.subject = subject
+        }
+    }
+
+    //==============================================================================//
