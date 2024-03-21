@@ -90,8 +90,15 @@ https://programtown.com/how-to-make-in-app-purchase-subscription-in-android-kotl
 - Multimodule navigation
 https://medium.com/huawei-developers/navigation-component-with-feature-modules-67afc3d23f3b
 
+-- lifecycle of Activity,fragment, view model
+https://betulnecanli.medium.com/lifecycle-full-guide-%EF%B8%8F-e93a8b74e0c8
+
+-- view lifecycle & custom views
+https://dev.to/idsulik/empowering-newbies-building-confidence-through-600-leetcode-solutions-a-guide-for-beginners-3960
+
 - Memory leaks
 https://proandroiddev.com/everything-you-need-to-know-about-memory-leaks-in-android-d7a59faaf46a
+https://betulnecanli.medium.com/memory-optimizations-in-android-d50f4d1d2d82
 
 - Scale Bitmap
 https://proandroiddev.com/image-decoding-bitmaps-android-c039790ee07e
@@ -107,3 +114,16 @@ https://proandroiddev.com/zero-to-hero-in-kmm-with-compose-and-swiftui-d8951f7d8
 
 -- Delegate Adapter 
 https://medium.com/@seidalins/delegate-adapters-building-heterogeneous-recyclerviewadapter-877cb7d3c6c0
+
+-- coroutine 
+https://www.youtube.com/watch?v=lmRzRKIsn1g&ab_channel=Smartherd
+https://devjorgecastro.medium.com/kotlin-coroutines-concepts-dd4016e66042
+
+-- battery optimization
+https://betulnecanli.medium.com/battery-life-optimizations-1e8695d90a4b
+
+-- system design 
+https://proandroiddev.com/a-simple-framework-for-mobile-system-design-interviews-89f6f4134b84
+
+-- solid 
+https://medium.com/huawei-developers/kotlin-solid-principles-tutorial-examples-192bf8c049dd
